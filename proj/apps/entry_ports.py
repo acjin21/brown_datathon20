@@ -9,13 +9,13 @@ import pandas as pd
 
 df = pd.read_excel('./data/port_of_entry.xlsx', sheet_name='Percent Change', header=1)
 df = df.rename(columns={'TOP 30 Ports of Entry': 'Ports of Entry','2012\n': '2012', '2013\n': '2013','2014\n': '2014','2015\n': '2015','2016\n': '2016','2017\n': '2017','2018\n': '2018'})
-
+port_names=df['Ports of Entry']
 port_id=0
-df_city = pd.DataFrame(data=df.iloc[port_id])
+df_city = pd.DataFrame(data=df.iloc[port_id,:])
 percent_change=list(df_city[0])[1:]
 year = ['2012', '2013', '2014', '2015', '2016', '2017', '2018']
 for i in range(len(percent_change)):
-  percent_change[i] = float(percent_change[i])
+    percent_change[i] = float(percent_change[i])
 
 port_data=[dict(x=year,
                   y=percent_change,
@@ -53,26 +53,22 @@ layout = html.Div([
 @app.callback(
     dash.dependencies.Output('bar_graph', 'figure'),
     [dash.dependencies.Input('city_dropdown', 'value')])
-def update_port_graph(port):
-  port_id=port
-  print(port_id)
-  df_city=df.iloc[int(port_id)]
-  print(df_city)
-  df_city = pd.DataFrame(data=df_city)
-  percent_change=list(df_city[0])
-  percent_change.pop(0)
+def update_port_graph(port):  
+  port_name=port_names[port]
+  df_city = pd.DataFrame(data=df.iloc[int(port),:])
+
+  percent_change=list(df_city[port])[1:]
   year = ['2012', '2013', '2014', '2015', '2016', '2017', '2018']
   for i in range(len(percent_change)):
-    percent_change[i] = float(percent_change[i])
-  percent_change=list(percent_change)
+      percent_change[i] = float(percent_change[i])
+  port_data=[dict(x=year,
+                  y=percent_change,
+                  name='Percent Change',
+                  type='bar')]
   return {
-      'data':[dict(
-              x=year,
-              y=percent_change,
-              name='Percent Change',
-              type='bar')],
+      'data':port_data,
       'layout':{
-        'title':'YoY Percent Change of Foreign Arrivals by Port - New York, NY',
+        'title':f'YoY Percent Change of Foreign Arrivals by Port - {port_name}',
         'xaxis':dict(title="Year"),
         'yaxis':dict(title="YoY Percent Change")
       }
