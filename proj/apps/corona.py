@@ -139,9 +139,9 @@ layout = html.Div([
                     x=list(airline_df['months'].values),
                     y=list(airline_df['sum'].values))
             ],
-            layout=dict(title="Air Traffic from China to U.S. Per Month",
+            layout=dict(title="Air Traffic from China/HK to U.S. Per Month",
             xaxis=dict(title="Month"),
-            yaxis=dict(title="YoY"))
+            yaxis=dict(title="Number of Travelers"))
             )
         )
     ),
@@ -155,18 +155,13 @@ layout = html.Div([
                     y=yoy_y)
             ],
             layout=dict(
-                title="Year-on-Year Air Traffic From China to U.S. Per Month",
-                xaxis=dict(title="Number of Passengers"))
+                title="Year-on-Year Air Traffic From China/HK to U.S. Per Month",
+                xaxis=dict(title="Month"),
+                yaxis=dict(title="YoY"))
+
             )
         )
     )
-    # fig = go.Figure()
-    # fig.add_trace(go.Scatter(x=x, y=y))
-
-    # # Set title
-    # fig.update_layout(
-    #     title_text=""
-    # )
 ])
 
 
