@@ -23,6 +23,8 @@ def display_page(pathname):
         return travel_volume.layout
     elif pathname == '/apps/entry_ports':
         return entry_ports.layout
+    elif pathname == '/':
+        return visa_type.layout
     else:
         return '404'
 
