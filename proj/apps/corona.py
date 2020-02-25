@@ -21,7 +21,7 @@ import pandas as pd
 url = ('http://newsapi.org/v2/top-headlines?'
        'country=us&'
        'q=Coronavirus&'
-       'from=2020-01-23&'
+       'from=2020-01-24&'
        'sortBy=popularity&'
        'apiKey=1abc60ef1ce04d22b846b9a90e68181e')
 
