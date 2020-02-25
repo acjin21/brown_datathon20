@@ -1,5 +1,5 @@
 import dash
-
+import os
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 links=[
   {'name': 'Visa Type Decomposition' ,'href':'/apps/visa_type'},
