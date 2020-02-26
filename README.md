@@ -16,6 +16,11 @@ There are 4 main subpages on this dashboard:
 * Travel by Nationality
 * Ports of Entry
 
+== UPDATE 2/25/20 == 
+The application has successfully been deployed using Heroku! 
+
+Visit the dashboard at https://airline-outlook-2020.herokuapp.com/.
+
 To launch the application locally, `cd` into the `proj` directory.
 Then, type in `python index.py` and open the dashboard in your browser. 
 
