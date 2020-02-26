@@ -6,7 +6,7 @@
 
 This project is our submission for the [Brown 2020 Datathon](https://browndata.org/datathon/). 
 
-![screenshot of dashboard](./imgs/corona_page_screenshot.png)
+![screenshot of dashboard](./imgs/corona_page_screenshot.png "A static screenshot of the Coronavirus Details subpage")
 
 ### Our primary goals in creating this dashboard are:
 * presenting a user-friendly data visualiation application to portfolio managers
