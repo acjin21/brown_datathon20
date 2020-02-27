@@ -1,6 +1,6 @@
 # brown_datathon20
 ## Airline Outlook 2020
-### An Information Dashboard exploring the impacts of nCOVID-19 on international travel.
+### An Information Dashboard Exploring the Impacts of nCOVID-19 on International Travel.
 
 ## Welcome to our Corona Dashboard! 
 
