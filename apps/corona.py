@@ -21,9 +21,9 @@ import pandas as pd
 import datetime
 
 today_date=datetime.datetime.today()
-from_date=(today_date-datetime.timedelta(days=30)).date()
+from_date=(today_date-datetime.timedelta(days=29)).date()
 from_date_str=str(from_date)
-
+print(from_date_str)
 url = ('http://newsapi.org/v2/top-headlines?'
        'country=us&'
        'q=Coronavirus&'
