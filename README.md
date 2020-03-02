@@ -1,6 +1,6 @@
 # brown_datathon20
 ## Airline Outlook 2020
-### an Information Dashboard exploring the impacts of nCOVID-19 on international travel.
+### An Information Dashboard Exploring the Impacts of nCOVID-19 on International Travel.
 
 ## Welcome to our Corona Dashboard! 
 
@@ -24,7 +24,7 @@ This project is our submission for the [Brown 2020 Datathon](https://browndata.o
 **== 2/25/20 ==**
 The application has successfully been deployed using Heroku! 
 
-Visit the dashboard at https://airline-outlook-2020.herokuapp.com/.
+Visit the dashboard at https://airline-outlook2020.herokuapp.com/.
 
 ### Debugging Locally
 To launch the application locally, make sure you are in the directory with `index.py`.
