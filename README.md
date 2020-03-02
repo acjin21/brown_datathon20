@@ -24,7 +24,7 @@ This project is our submission for the [Brown 2020 Datathon](https://browndata.o
 **== 2/25/20 ==**
 The application has successfully been deployed using Heroku! 
 
-Visit the dashboard at https://airline-outlook-2020.herokuapp.com/.
+Visit the dashboard at https://airline-outlook2020.herokuapp.com/.
 
 ### Debugging Locally
 To launch the application locally, make sure you are in the directory with `index.py`.
